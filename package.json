@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "P3 OC ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beadelannay/Beatrice_DELANNAY_29102021..git"
+  },
+  "author": "Béatrice DELANNAY",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beadelannay/Beatrice_DELANNAY_29102021./issues"
+  },
+  "homepage": "https://github.com/beadelannay/Beatrice_DELANNAY_29102021.#readme",
+  "devDependencies": {
+    "sass": "^1.43.4"
+  }
+}
