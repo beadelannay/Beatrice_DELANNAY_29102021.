@@ -1,0 +1,52 @@
+/********************    HEADER     ********************/
+header {
+  padding-top: 20px;
+
+  #logo {
+    text-align: center;
+
+    img {
+      max-width: 170px;
+      margin-bottom: 10px;
+    }
+  } 
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  font-weight: bold;
+  box-shadow: 0px 0px 5px grey;
+
+  & i {
+    margin-left: -30px;
+    margin-right: 20px;
+  }
+}
+
+.introduction {
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 40px 40px 60px 40px;
+
+  &__reservez {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0;
+  }
+
+  &__decouvrez {
+    margin-top: 0;
+  }
+  
+  &__explorez {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 30px;
+  color: white;
+  padding: 12px 24px;
+  font-size: 15px;
+  box-shadow: 4px 4px 8px darkgrey;
+  }
+}
