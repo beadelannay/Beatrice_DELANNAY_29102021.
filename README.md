@@ -6,7 +6,7 @@ Troisième projet du parcours de développeur web chez OpenClassrooms, intitulé
 
 L'objectif est de réaliser l'intégration de la maquette d'un site de réservation de restaurants nommé "Ohmyfood" (voir l'image ci-dessous), avec des animations CSS.
 
-![Ohmyfood] (https://user.oc-static.com/upload/2020/08/24/15982605908418_Maquettes%20Ohmyfood.jpg)
+![Ohmyfood](https://user.oc-static.com/upload/2020/08/24/15982605908418_Maquettes%20Ohmyfood.jpg)
 
 ## Technologies, logiciels et langages utilisés
 * HTML5
