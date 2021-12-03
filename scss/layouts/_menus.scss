@@ -1,0 +1,249 @@
+/*****************   HEADER RESTAURANT    *****************/
+#logo__restaurants {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    & img { 
+        max-width: 150px;
+        margin-top: 20px;
+        margin-right: 60px;
+        margin-bottom: 20px;
+    }
+   
+   .fa-arrow-left {
+        font-size: 19px;
+        color: black;
+        padding-right: 60px;
+       
+        &:hover {transform: scale(1.2);}
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    #logo__restaurants img {max-width: 200px;}
+    #logo__restaurants .fa-arrow-left {font-size: 30px;}
+}
+
+@media all and (min-width: 992px) {
+    #logo__restaurants img {max-width: 200px;}
+    #logo__restaurants .fa-arrow-left {font-size: 30px;}
+}
+
+/*****************   PHOTO RESTAURANT   *****************/
+.restaurant-photo img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .restaurant-photo img {
+        width: 100%;
+        max-height: 350px;
+        object-fit: cover;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .restaurant-photo img {
+        width: 100%;
+        max-height: 350px;
+        object-fit: cover;
+    }
+}
+
+/****************    CARTE RESTAURANT    ****************/
+.presentation {
+    background-color: #F6F6F6;
+    padding: 36px 21px;
+    margin-top: -27px;
+    border-radius: 30px 30px 0 0;
+    position: relative;
+    text-align: left;
+    
+    & h1 {
+        margin-top: 0;
+        font-size: xx-large;}
+
+    & .coeur i {
+        position: absolute;
+        top: 35px;
+        right: 20px;
+        font-size: 35px;
+    }
+
+    & .coeur .fas {
+        @include gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    
+        &:hover {
+        opacity: 1;
+        transform:scale(1.1);
+        }
+    }  
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .presentation h1 {text-align: center;}
+}
+  
+@media all and (min-width: 992px) {
+    .presentation {
+        padding-left: 40px;
+    
+        h1 {text-align: center;} 
+        
+        & .coeur i {right: 40px;}
+
+        & .menus__entrees__carte, .menus__plats__carte, .menus__desserts__carte {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
+
+        & .menus__entrees__carte__item, .menus__plats__carte__item, .menus__desserts__carte__item {
+            width: 100%;
+            margin-right: 20px;
+        }
+    }    
+}
+
+.menus h2 {
+    font-weight: normal;
+    font-size: 20px;
+    margin: 40px 0 30px 10px;
+    position: relative;
+
+    &::after {
+        content: "";
+        background-color: $lightgreen;
+        width: 48px;
+        height: 4px;
+        position: absolute;
+        top: 28px;
+        left: 0px;
+    }
+}
+
+.menus__entrees__carte__item, .menus__plats__carte__item, .menus__desserts__carte__item {
+    background-color: #FFF; 
+    box-shadow: 4px 4px 16px darkgray;
+    padding: 0 0 0 16px;
+    border-radius: 12px;
+    margin: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    animation: appear 2s;
+    animation-fill-mode: both;
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+          animation-delay: 100ms* $i;
+      } 
+    }
+
+    &:hover .confirmation {
+        margin-right: 0;
+    
+        & i {animation: spin 0.5s ease-in-out;}
+    }
+}
+
+.carte-detaillee {
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &__texte {
+        width: 230px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+    
+        & h3 {
+            
+            margin-top: 0; 
+            margin-bottom: 0;  
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; 
+        }
+
+        & h4 {
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-weight: normal;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    &__prix {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        align-self: flex-end;
+        font-weight: bold;
+        margin-right: 20px;
+        width: 25%;
+    }
+}
+    
+.confirmation {
+    background-color: $lightgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -64px;
+    width: 64px; 
+    transition: margin-right 0.5s;
+
+    & .coche {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: #FFF;
+        color: $lightgreen; 
+        padding-left: 5px;
+        padding-top: 5px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .carte-detaillee {
+        &__texte {overflow: visible;
+            & h3 {overflow: visible;}
+            & h4 {overflow: visible;}
+        }
+    }
+}
+
+@media all and (min-width: 992px) {
+    .carte-detaillee {
+        &__texte {overflow: visible;
+            & h3 {overflow: visible;}
+            & h4 {overflow: hidden;}
+        }
+    }
+}
+/****************   BOUTON COMMANDER    ****************/
+.commander {
+    padding: 30px 0 80px 0;
+    text-align: center;
+    background-color: #F6F6F6;
+
+    &__btn--commander {
+  @include button;  
+    }  
+}

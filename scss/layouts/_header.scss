@@ -1,0 +1,89 @@
+/********************    LOADER     ********************/
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: #FFF;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: loader 200ms 3s forwards;
+  transform-origin: top;
+}
+
+@keyframes loader {
+  to {transform: scale(0);}
+}
+
+.loader__circle {
+  border: 8px solid $lightgreen;
+  border-top: 8px solid $purple;
+  border-bottom: 8px solid $pink;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: loaderspin 3s linear forwards;
+}
+
+/***************    ANIMATION LOADER     ***************/
+@keyframes loaderspin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/********************    HEADER     ********************/
+header {
+  padding-top: 20px;
+
+  #logo {
+    text-align: center;
+
+    img {
+      max-width: 170px;
+      margin-bottom: 10px;
+    }
+  } 
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  font-weight: bold;
+  box-shadow: 0px 0px 5px grey;
+
+  & i {
+    margin-left: -30px;
+    margin-right: 20px;
+  }
+}
+
+.introduction {
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 40px 40px 70px 40px;
+
+  &__reservez {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0;
+  }
+
+  &__decouvrez {
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+  
+  &__btn--explorez {
+    @include button;
+  }
+}

@@ -1,0 +1,21 @@
+@mixin gradient {
+    background-image: linear-gradient($pink, $purple);
+}
+
+@mixin shadow {   
+    opacity: 0.8;
+    box-shadow: 16px 16px 16px darkgrey;
+}
+
+@mixin button {
+    border-radius: 30px;
+    color: #F6F6F6;
+    padding: 14px 50px;
+    font-size: 16px;
+    box-shadow: 4px 4px 8px darkgrey;
+    @include gradient; 
+    transition: background-color 250ms;
+    &:hover {
+      @include shadow;
+    }   
+}
