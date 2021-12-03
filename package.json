@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/beadelannay/Beatrice_DELANNAY_29102021.#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "postcss-cli": "^9.0.2",
     "sass": "^1.43.4"
   }
 }
