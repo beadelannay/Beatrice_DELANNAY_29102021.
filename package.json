@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "P3 OC ohmyfood",
   "main": "index.js",
-  "scripts": {
-    "sass": "sass --watch style.scss style.css",  
-    "prefix": "postcss ./scss/style.css --use autoprefixer -o ./prefixed"
+  "scripts": {  
+    "prefix": "postcss ./scss/style.css --use autoprefixer -o ./prefixed.css"
   },
   "repository": {
     "type": "git",
