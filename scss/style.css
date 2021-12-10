@@ -115,6 +115,9 @@ header #logo img {
   box-shadow: 16px 16px 16px darkgrey;
 }
 
+@media all and (max-width: 353px) {
+  .introduction__btn--explorez {display: flex;}
+}
 /********************    FONCTIONNEMENT     ********************/
 .Fonctionnement {
   margin: 40px 0 40px 0;
@@ -383,13 +386,13 @@ footer .fas {
 }
 .presentation h1 {
   margin-top: 0;
-  font-size: xx-large;
+  font-size: x-large;
 }
 .presentation .coeur i {
   position: absolute;
   top: 35px;
   right: 20px;
-  font-size: 35px;
+  font-size: 30px;
 }
 .presentation .coeur .fas {
   background-image: linear-gradient(#FF79DA, #9356DC);
@@ -417,17 +420,7 @@ footer .fas {
     text-align: center;
   }
   .presentation .coeur i {
-    right: 40px;
-  }
-  .presentation .menus__entrees__carte, .presentation .menus__plats__carte, .presentation .menus__desserts__carte {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-  }
-  .presentation .menus__entrees__carte__item, .presentation .menus__plats__carte__item, .presentation .menus__desserts__carte__item {
-    width: 100%;
-    margin-right: 20px;
+    right: 50px;
   }
 }
 .menus h2 {
@@ -483,26 +476,26 @@ footer .fas {
   cursor: pointer;
 }
 .carte-detaillee__texte {
-  width: 230px;
+  width: 215px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: hidden;
 }
 .carte-detaillee__texte h3 {
   margin-top: 0;
   margin-bottom: 0;
-  overflow: hidden;
+  font-size: 16px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .carte-detaillee__texte h4 {
   margin-top: 10px;
   margin-bottom: 0;
+  font-size: 16px;
   font-weight: normal;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
 }
 .carte-detaillee__prix {
   display: flex;
@@ -511,7 +504,6 @@ footer .fas {
   align-self: flex-end;
   font-weight: bold;
   margin-right: 20px;
-  width: 25%;
 }
 
 .confirmation {
@@ -533,12 +525,15 @@ footer .fas {
   padding-top: 5px;
 }
 
-@media all and (min-width: 768px) and (max-width: 991px) {
-  .carte-detaillee__texte {
+@media all and (min-width: 460px) and (max-width: 600px) {
+  .carte-detaillee__texte h4 {
     overflow: visible;
   }
-  .carte-detaillee__texte h3 {
-    overflow: visible;
+}
+@media all and (min-width: 601px) and (max-width: 991px) {
+  .menus__entrees__carte__item, .menus__plats__carte__item, .menus__desserts__carte__item {
+    width: 80%;
+    margin-left: 60px;
   }
   .carte-detaillee__texte h4 {
     overflow: visible;
@@ -546,13 +541,7 @@ footer .fas {
 }
 @media all and (min-width: 992px) {
   .carte-detaillee__texte {
-    overflow: visible;
-  }
-  .carte-detaillee__texte h3 {
-    overflow: visible;
-  }
-  .carte-detaillee__texte h4 {
-    overflow: hidden;
+    width: 100%;  
   }
 }
 /****************   BOUTON COMMANDER    ****************/
