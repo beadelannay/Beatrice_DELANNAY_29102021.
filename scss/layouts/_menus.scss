@@ -64,13 +64,13 @@
     
     & h1 {
         margin-top: 0;
-        font-size: xx-large;}
+        font-size: x-large;}
 
     & .coeur i {
         position: absolute;
         top: 35px;
         right: 20px;
-        font-size: 35px;
+        font-size: 30px;
     }
 
     & .coeur .fas {
@@ -98,19 +98,7 @@
     
         h1 {text-align: center;} 
         
-        & .coeur i {right: 40px;}
-
-        & .menus__entrees__carte, .menus__plats__carte, .menus__desserts__carte {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-around;
-        }
-
-        & .menus__entrees__carte__item, .menus__plats__carte__item, .menus__desserts__carte__item {
-            width: 100%;
-            margin-right: 20px;
-        }
+        & .coeur i {right: 50px;}
     }    
 }
 
@@ -164,17 +152,16 @@
     cursor: pointer;
 
     &__texte {
-        width: 230px;
+        width: 215px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        overflow: hidden;
     
         & h3 {
             
             margin-top: 0; 
             margin-bottom: 0;  
-            overflow: hidden;
+            font-size: 16px;
             text-overflow: ellipsis;
             white-space: nowrap; 
         }
@@ -182,10 +169,11 @@
         & h4 {
             margin-top: 10px;
             margin-bottom: 0;
+            font-size: 16px;
             font-weight: normal;
-            overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            overflow: hidden;
         }
     }
 
@@ -196,7 +184,6 @@
         align-self: flex-end;
         font-weight: bold;
         margin-right: 20px;
-        width: 25%;
     }
 }
     
@@ -220,23 +207,25 @@
     }
 }
 
-@media all and (min-width: 768px) and (max-width: 991px) {
-    .carte-detaillee {
-        &__texte {overflow: visible;
-            & h3 {overflow: visible;}
-            & h4 {overflow: visible;}
-        }
+@media all and (min-width: 460px) and (max-width: 600px) {
+    .carte-detaillee__texte h4 {
+      overflow: visible;
     }
-}
-
-@media all and (min-width: 992px) {
-    .carte-detaillee {
-        &__texte {overflow: visible;
-            & h3 {overflow: visible;}
-            & h4 {overflow: hidden;}
-        }
+  }
+  @media all and (min-width: 601px) and (max-width: 991px) {
+    .menus__entrees__carte__item, .menus__plats__carte__item, .menus__desserts__carte__item {
+      width: 80%;
+      margin-left: 60px;
     }
-}
+    .carte-detaillee__texte h4 {
+      overflow: visible;
+    }
+  }
+  @media all and (min-width: 992px) {
+    .carte-detaillee__texte {
+      width: 100%;  
+    }
+  }
 /****************   BOUTON COMMANDER    ****************/
 .commander {
     padding: 30px 0 80px 0;
