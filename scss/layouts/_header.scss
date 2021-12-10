@@ -87,3 +87,7 @@ header {
     @include button;
   }
 }
+
+@media all and (max-width: 353px) {
+  .introduction__btn--explorez {display: flex;}
+}
