@@ -582,7 +582,7 @@ footer .fas {
           animation: spin 0.5s ease-in-out;
 }
 @media screen and (min-width: 375px) {
-  ..menus__entrees__carte__item, .menus__plats__carte__item, .menus__desserts__carte__item  {
+  .menus__entrees__carte__item, .menus__plats__carte__item, .menus__desserts__carte__item  {
     max-width: 330px;
     min-width: 280px;
   }
