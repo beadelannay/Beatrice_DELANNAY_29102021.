@@ -475,6 +475,23 @@ footer .fas {
   animation: spin 0.5s ease-in-out;
 }
 
+@media screen and (min-width: 375px) {
+  .menus__entrees__carte__item, .menus__plats__carte__item, .menus__desserts__carte__item  {
+    max-width: 330px;
+    min-width: 280px;
+  }
+}
+@media screen and (min-width: 650px) {
+  .menus__entrees__carte__item, .menus__plats__carte__item, .menus__desserts__carte__item  {
+    margin-right: 25px;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 992px) {
+  .menus__entrees__carte__item, .menus__plats__carte__item, .menus__desserts__carte__item {
+    max-width: none;
+  }
+}
+
 .carte-detaillee {
   width: 350px;
   padding: 14px 0;
