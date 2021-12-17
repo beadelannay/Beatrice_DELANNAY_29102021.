@@ -581,9 +581,24 @@ footer .fas {
   -webkit-animation: spin 0.5s ease-in-out;
           animation: spin 0.5s ease-in-out;
 }
-
+@media screen and (min-width: 375px) {
+  ..menus__entrees__carte__item, .menus__plats__carte__item, .menus__desserts__carte__item  {
+    max-width: 330px;
+    min-width: 280px;
+  }
+}
+@media screen and (min-width: 650px) {
+  .menus__entrees__carte__item, .menus__plats__carte__item, .menus__desserts__carte__item  {
+    margin-right: 25px;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 992px) {
+  .menus__entrees__carte__item, .menus__plats__carte__item, .menus__desserts__carte__item {
+    max-width: none;
+  }
+}
 .carte-detaillee {
-  width: 100%;
+  width: 350px;
   padding: 14px 0;
   border-radius: 12px;
   display: -webkit-box;
@@ -595,7 +610,7 @@ footer .fas {
   cursor: pointer;
 }
 .carte-detaillee__texte {
-  width: 215px;
+  width: 230px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -606,14 +621,27 @@ footer .fas {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.carte-detaillee:hover .carte-detaillee__texte {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
 }
 .carte-detaillee__texte h3 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
   -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   white-space: nowrap;
+}
+.carte-detaillee:hover .carte-detaillee__texte h3 {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; 
 }
 .carte-detaillee__texte h4 {
   margin-top: 10px;
@@ -621,9 +649,36 @@ footer .fas {
   font-size: 16px;
   font-weight: normal;
   -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
+}
+.carte-detaillee:hover .carte-detaillee__texte h4 {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; 
+}
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .carte-detaillee__texte h3 {
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .carte-detaillee__texte h4 {
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 405px) {
+  .carte-detaillee:hover .carte-detaillee__texte {
+  max-width: 130px;
+  }
+  .carte-detaillee__texte h4 {
+    font-size: 14px;
+  }
 }
 .carte-detaillee__prix {
   display: -webkit-box;
@@ -639,6 +694,7 @@ footer .fas {
       align-self: flex-end;
   font-weight: bold;
   margin-right: 20px;
+  width: 25%;
 }
 .confirmation {
   background-color: #99E2D0;
@@ -666,23 +722,12 @@ footer .fas {
   padding-left: 5px;
   padding-top: 5px;
 }
-@media all and (min-width: 460px) and (max-width: 600px) {
-  .carte-detaillee__texte h4 {
+@media all and (min-width: 480px) {
+  .carte-detaillee, .carte-detaillee__texte {
+    width: 100%;
+  }
+  .carte-detaillee__texte, .carte-detaillee__texte h4:hover {
     overflow: visible;
-  }
-}
-@media all and (min-width: 601px) and (max-width: 991px) {
-  .menus__entrees__carte__item, .menus__plats__carte__item, .menus__desserts__carte__item {
-    width: 80%;
-    margin-left: 60px;
-  }
-  .carte-detaillee__texte h4 {
-    overflow: visible;
-  }
-}
-@media all and (min-width: 992px) {
-  .carte-detaillee__texte {
-    width: 100%;  
   }
 }
 /****************   BOUTON COMMANDER    ****************/
