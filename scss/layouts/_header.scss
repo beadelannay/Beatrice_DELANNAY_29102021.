@@ -13,10 +13,6 @@
   transform-origin: top;
 }
 
-@keyframes loader {
-  to {transform: scale(0);}
-}
-
 .loader__circle {
   border: 8px solid $lightgreen;
   border-top: 8px solid $purple;
@@ -28,6 +24,10 @@
 }
 
 /***************    ANIMATION LOADER     ***************/
+@keyframes loader {
+  to {transform: scale(0);}
+}
+
 @keyframes loaderspin {
   0% {
     transform: rotate(0deg);
@@ -89,5 +89,8 @@ header {
 }
 
 @media all and (max-width: 353px) {
-  .introduction__btn--explorez {display: flex;}
+  .introduction__btn--explorez {
+    display: flex;
+    white-space: nowrap;
+  }
 }

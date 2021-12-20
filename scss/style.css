@@ -35,12 +35,6 @@ h2 {
   animation: loader 200ms 3s forwards;
   transform-origin: top;
 }
-
-@keyframes loader {
-  to {
-    transform: scale(0);
-  }
-}
 .loader__circle {
   border: 8px solid #99E2D0;
   border-top: 8px solid #9356DC;
@@ -50,8 +44,13 @@ h2 {
   height: 100px;
   animation: loaderspin 3s linear forwards;
 }
-
 /***************    ANIMATION LOADER     ***************/
+@keyframes loader {
+  to {
+    transform: scale(0);
+  }
+}
+
 @keyframes loaderspin {
   0% {
     transform: rotate(0deg);
@@ -73,7 +72,6 @@ header #logo img {
   max-width: 170px;
   margin-bottom: 10px;
 }
-
 .localisation {
   display: flex;
   justify-content: center;
@@ -86,7 +84,6 @@ header #logo img {
   margin-left: -30px;
   margin-right: 20px;
 }
-
 .introduction {
   text-align: center;
   background-color: #f6f6f6;
@@ -114,15 +111,15 @@ header #logo img {
   opacity: 0.8;
   box-shadow: 16px 16px 16px darkgrey;
 }
-
 @media all and (max-width: 353px) {
-  .introduction__btn--explorez {display: flex;}
+  .introduction__btn--explorez {
+    display: flex;
+    white-space: nowrap;}
 }
 /********************    FONCTIONNEMENT     ********************/
 .Fonctionnement {
   margin: 40px 0 40px 0;
 }
-
 .fonctionnement {
   margin: 0;
   padding: 0;
@@ -156,12 +153,10 @@ header #logo img {
   padding: 4px 4px;
   margin-left: -30px;
 }
-
 @media all and (min-width: 768px) and (max-width: 991px) {
   .Fonctionnement h2 {
     text-align: center;
   }
-
   .fonctionnement {
     display: flex;
     justify-content: center;
@@ -171,7 +166,6 @@ header #logo img {
   .Fonctionnement h2 {
     text-align: center;
   }
-
   .fonctionnement {
     display: flex;
     justify-content: space-around;
@@ -182,7 +176,6 @@ header #logo img {
   background-color: #f6f6f6;
   padding: 50px 0 50px 0;
 }
-
 .restaurants {
   display: flex;
   flex-wrap: wrap;
@@ -252,7 +245,6 @@ header #logo img {
   .Restaurants h2 {
     text-align: center;
   }
-
   .restaurants__card {
     margin: 10px 30px 40px 30px;
   }
@@ -295,7 +287,6 @@ footer .fas {
   margin-right: 20px;
   font-size: small;
 }
-
 @media all and (min-width: 768px) and (max-width: 991px) {
   footer {
     flex-direction: row;

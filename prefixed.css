@@ -45,20 +45,6 @@ h2 {
       -ms-transform-origin: top;
           transform-origin: top;
 }
-
-@-webkit-keyframes loader {
-  to {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-}
-
-@keyframes loader {
-  to {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-}
 .loader__circle {
   border: 8px solid #99E2D0;
   border-top: 8px solid #9356DC;
@@ -69,8 +55,19 @@ h2 {
   -webkit-animation: loaderspin 3s linear forwards;
           animation: loaderspin 3s linear forwards;
 }
-
 /***************    ANIMATION LOADER     ***************/
+@-webkit-keyframes loader {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+@keyframes loader {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
 @-webkit-keyframes loaderspin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -106,7 +103,6 @@ header #logo img {
   max-width: 170px;
   margin-bottom: 10px;
 }
-
 .localisation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -126,7 +122,6 @@ header #logo img {
   margin-left: -30px;
   margin-right: 20px;
 }
-
 .introduction {
   text-align: center;
   background-color: #f6f6f6;
@@ -160,15 +155,16 @@ header #logo img {
   -webkit-box-shadow: 16px 16px 16px darkgrey;
           box-shadow: 16px 16px 16px darkgrey;
 }
-
 @media all and (max-width: 353px) {
-  .introduction__btn--explorez {display: -webkit-box;display: -ms-flexbox;display: flex;}
+  .introduction__btn--explorez {
+    display: -webkit-box;display: -ms-flexbox;display: flex;
+    white-space: nowrap;
+  }
 }
 /********************    FONCTIONNEMENT     ********************/
 .Fonctionnement {
   margin: 40px 0 40px 0;
 }
-
 .fonctionnement {
   margin: 0;
   padding: 0;
@@ -205,12 +201,10 @@ header #logo img {
   padding: 4px 4px;
   margin-left: -30px;
 }
-
 @media all and (min-width: 768px) and (max-width: 991px) {
   .Fonctionnement h2 {
     text-align: center;
   }
-
   .fonctionnement {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -224,7 +218,6 @@ header #logo img {
   .Fonctionnement h2 {
     text-align: center;
   }
-
   .fonctionnement {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -238,7 +231,6 @@ header #logo img {
   background-color: #f6f6f6;
   padding: 50px 0 50px 0;
 }
-
 .restaurants {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -432,7 +424,6 @@ footer .fas {
       -ms-transform: scale(1.2);
           transform: scale(1.2);
 }
-
 @media all and (min-width: 768px) and (max-width: 991px) {
   #logo__restaurants img {
     max-width: 200px;
