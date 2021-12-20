@@ -114,7 +114,9 @@ header #logo img {
 @media all and (max-width: 353px) {
   .introduction__btn--explorez {
     display: flex;
-    white-space: nowrap;}
+    justify-content: center;
+    white-space: nowrap;
+  }
 }
 /********************    FONCTIONNEMENT     ********************/
 .Fonctionnement {
